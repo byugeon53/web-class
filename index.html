@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Elegant Restaurant</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+    font-family:'Inter', sans-serif;
+    background:#0f0f14;
+    color:#f5f5f5;
+}
+
+.layout{
+    display:flex;
+    gap:20px;
+    padding:30px;
+}
+
+.layout section{
+    flex:1;
+}
+
+.panel{
+    background:linear-gradient(145deg,#1c1c24,#111);
+    border-radius:20px;
+    padding:24px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.6);
+    transition:transform .3s ease, box-shadow .3s ease;
+}
+
+.panel:hover{
+    transform:translateY(-6px);
+    box-shadow:0 20px 40px rgba(0,0,0,0.8);
+}
+
+.panel h2{
+    font-family:'Playfair Display', serif;
+    font-size:1.5rem;
+    margin-bottom:10px;
+    color:#d4af37;
+}
+
+.panel p{
+    opacity:0.85;
+    margin-bottom:18px;
+}
+
+/* 버튼 스타일 */
+.btn{
+    display:inline-block;
+    padding:10px 18px;
+    border-radius:999px;
+    background:linear-gradient(135deg,#d4af37,#f5d77a);
+    color:#111;
+    font-weight:600;
+    text-decoration:none;
+    transition:all .25s ease;
+}
+
+.btn:hover{
+    transform:scale(1.05);
+    box-shadow:0 8px 20px rgba(212,175,55,0.5);
+}
+
+/* 메뉴 강조 */
+.menu{
+    background:linear-gradient(145deg,#2b1f0a,#1a1407);
+}
+
+/* 반응형 */
+@media(max-width:768px){
+    .layout{
+        flex-direction:column;
+        padding:16px;
+    }
+
+    .panel{
+        padding:18px;
+    }
+
+    .panel h2{
+        font-size:1.2rem;
+    }
+
+    .panel p{
+        font-size:0.9rem;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<main class="layout">
+
+<section class="panel intro">
+    <h2>Maison Élégante</h2>
+    <p>파리와 뉴욕 맨해튼의 감성을 담은 프리미엄 레스토랑. 클래식과 모던이 공존하는 공간입니다.</p>
+    <a href="#" class="btn">스토리 보기</a>
+</section>
+
+<section class="panel menu">
+    <h2>Signature Menu</h2>
+    <p>셰프의 감각이 담긴 시그니처 요리를 만나보세요.</p>
+    <a href="#" class="btn">메뉴 보기</a>
+</section>
+
+<section class="panel contact">
+    <h2>Reservation</h2>
+    <p>예약 및 문의는 언제든지 가능합니다.</p>
+    <a href="#" class="btn">예약하기</a>
+</section>
+
+</main>
+
+</body>
+</html>
